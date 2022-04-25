@@ -10,7 +10,7 @@ Save and submit the completed file for your homework submission.
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory:
 
-![pic](Screenshots\step1.png)
+![pic](Screenshots/step1.png)
 
 
 
@@ -18,7 +18,7 @@ Save and submit the completed file for your homework submission.
 
         tar xvvf TarDocs.tar
 
-![pic](Screenshots\step2.png)
+![pic](Screenshots/step2.png)
 
 
 
@@ -38,7 +38,7 @@ Save and submit the completed file for your homework submission.
 
         tar tvvf Javaless_Doc.tar | grep Java
 
-![pic](Screenshots\javaproof.png)
+![pic](Screenshots/javaproof.png)
 
 #### Critical Analysis Question
 
@@ -63,7 +63,7 @@ Save and submit the completed file for your homework submission.
         nano system.sh
 2. Paste your `system.sh` script edits below:
 
-    ![pic](Screenshots\system.sh.png)
+    ![pic](Screenshots/system.sh.png)
 
 
     
@@ -90,4 +90,4 @@ Save and submit the completed file for your homework submission.
 
     - Add your config file edits below:
 
-![pic](Screenshots\logrotate.png)
+![pic](Screenshots/logrotate.png)
