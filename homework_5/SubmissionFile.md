@@ -10,16 +10,16 @@ Save and submit the completed file for your homework submission.
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory:
 
+![pic](Screenshots\step1.png)
 
-
-![pic](Screenshots\step2.png)
 
 
         tar tvvf TarDocs.tar
 
         tar xvvf TarDocs.tar
 
-![pic](Screenshots\step1.png)
+![pic](Screenshots\step2.png)
+
 
 
 
